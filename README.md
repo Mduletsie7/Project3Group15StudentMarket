@@ -34,7 +34,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Student Central - (Project 3, Group 15)</h3>
+<h3 align="center">StudentMarket - (Project 3, Group 15)</h3>
 
   <p align="center">
     The team have identified a need among university students for a one stop shop for all
