@@ -10,8 +10,6 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import PrivateRoute from './components/PrivateRoute';
-import AdminRoute from './components/AdminRoute';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -20,9 +18,9 @@ import RegisterScreen from './screens/RegisterScreen';
 import store from './store';
 import { Provider } from 'react-redux';
 import ShippingScreen from './screens/ShippingScreen';
-import OrderListScreen from './screens/admin/OrderListScreen';
-import ProductListScreen from './screens/admin/ProductListScreen';
-import UserListScreen from './screens/admin/UserListScreen';
+import PrivateRoute from './components/PrivateRoute';
+import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,22 +31,14 @@ const router = createBrowserRouter(
       <Route path='/login' element={<LoginScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
 
+      <Route path='' element={<PrivateRoute/>}>
+      <Route path='/shipping' element={<ShippingScreen />} />
+      <Route path='/payment' element={<PaymentScreen />} />
+      <Route path='/placeorder' element={<PlaceOrderScreen />} />
 
-      {/* PrivateRoute to make shipping screen inaccessable unless you are logged in  */}
 
-      <Route path='' element={<PrivateRoute />}>
-        <Route path='/shipping' element={<ShippingScreen />} />
       </Route>
-
-      {/* AdminRoute to make screens only accessable if logged in as Admin  */}
-      <Route path='' element={<AdminRoute />}>
-        <Route path='/admin/orderlist' element={<OrderListScreen />} />
-        <Route path='/admin/productlist' element={<ProductListScreen />} />
-        <Route path='/admin/userlist' element={<UserListScreen />} />
-      </Route>
-
     </Route>
-    
   )
 );
 
