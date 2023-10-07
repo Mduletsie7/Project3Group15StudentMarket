@@ -31,7 +31,7 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    author: {
+    brand: {
       type: String,
       required: true,
     },
