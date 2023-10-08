@@ -6,7 +6,6 @@ import Product from '../components/Product';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
-import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
 
 const HomeScreen = () => {
@@ -18,6 +17,9 @@ const HomeScreen = () => {
   });
 
   return (
+    /* This code creates a div for the 'Hero' section and sets an image as our hero image
+    ::return:: sets the hero image on the homescreen
+    */
     <>
       <div className='Hero'>
         <img
@@ -25,15 +27,12 @@ const HomeScreen = () => {
           alt=''
           srcset=''
         />
-        <h1> Featured Products </h1>
+
       </div>
-      {!keyword ? (
-        <ProductCarousel />
-      ) : (
-        <Link to='/' className='btn btn-light mb-4'>
-          Go Back
-        </Link>
-      )}
+
+  {/* Below code generates a Bootstrap loading spinner 
+  ::return:: Loading spinner from Bootstrap when page elements are still loading */}
+
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -41,9 +40,13 @@ const HomeScreen = () => {
           {error?.data?.message || error.error}
         </Message>
       ) : (
+
+        /* This code uses the Javascript map function to go through the json file and return the objects 1 by 1
+        ::return:: products from MongoDB database 
+        */
         <>
           <Meta />
-          <h1>Latest Products</h1>
+          <h1>Featured Products</h1>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
