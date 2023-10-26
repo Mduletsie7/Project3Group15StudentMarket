@@ -37,7 +37,7 @@ const Header = () => {
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              {/* <img src={logo} alt='ProShop' /> */}
+              {/* <img src={logo} alt='Logo' /> */}
               Textbooks Go
             </Navbar.Brand>
           </LinkContainer>
@@ -47,7 +47,7 @@ const Header = () => {
             <LinkContainer to='/contact'>
             <Navbar.Brand>
               {/* <img src={logo} alt='ProShop' /> */}
-              Contact
+              Contact / Requests
             </Navbar.Brand>
           </LinkContainer>
               <LinkContainer to='/cart'>
