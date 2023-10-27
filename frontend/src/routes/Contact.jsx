@@ -23,7 +23,7 @@ const EmailContactForm = () => {
     <h1>Feel free to send us a message with any requests and we'll try our best to outsource it for you.</h1>
     <div className='contactPage'>
     <label>Name</label>
-     <input className='nameBox' type="text" name="user_name" />
+     <input className='nameBox' type="text" name="from_name" />
      <label>Email</label>
      <input className='emailBox' type="email" name="user_email" />
      <label>Message</label>
