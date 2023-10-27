@@ -89,10 +89,7 @@ const ProductScreen = () => {
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <Rating
-                    value={product.rating}
-                    text={`${product.numReviews} reviews`}
-                  />
+ 
                 </ListGroup.Item>
                 <ListGroup.Item>Price: R{product.price}</ListGroup.Item>
                 <ListGroup.Item>
@@ -161,7 +158,7 @@ const ProductScreen = () => {
           <Row className='review'>
             <Col md={6}>
               <h2>Reviews</h2>
-              {product.reviews.length === 0 && <Message>No Reviews</Message>}
+
               <ListGroup variant='flush'>
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
@@ -178,22 +175,7 @@ const ProductScreen = () => {
 
                   {userInfo ? (
                     <Form onSubmit={submitHandler}>
-                      <Form.Group className='my-2' controlId='rating'>
-                        <Form.Label>Rating</Form.Label>
-                        <Form.Control
-                          as='select'
-                          required
-                          value={rating}
-                          onChange={(e) => setRating(e.target.value)}
-                        >
-                          <option value=''>Select...</option>
-                          <option value='1'>1 - Poor</option>
-                          <option value='2'>2 - Fair</option>
-                          <option value='3'>3 - Good</option>
-                          <option value='4'>4 - Very Good</option>
-                          <option value='5'>5 - Excellent</option>
-                        </Form.Control>
-                      </Form.Group>
+
                       <Form.Group className='my-2' controlId='comment'>
                         <Form.Label>Comment</Form.Label>
                         <Form.Control
