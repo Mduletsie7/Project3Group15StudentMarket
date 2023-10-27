@@ -13,7 +13,7 @@ const Meta = ({ title, description, keywords }) => {
 Meta.defaultProps = {
   title: 'Welcome To Student Market',
   description: 'We sell the best products for cheap',
-  keywords: 'electronics, buy electronics, cheap electroincs',
+  keywords: 'textbooks, buy textbooks, second hand textbooks for sale',
 };
 
 export default Meta;
