@@ -47,7 +47,7 @@ const Header = () => {
             <LinkContainer to='/contact'>
             <Navbar.Brand>
               {/* <img src={logo} alt='ProShop' /> */}
-              Contact / Requests
+              Contact Us
             </Navbar.Brand>
           </LinkContainer>
               <LinkContainer to='/cart'>
