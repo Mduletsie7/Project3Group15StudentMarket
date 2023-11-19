@@ -20,7 +20,7 @@ const EmailContactForm = () => {
 
  return (
    <form ref={form} onSubmit={sendEmail}>
-    <h1>Feel free to send us a message with any requests and we'll try our best to outsource it for you.</h1>
+    <h1>We'd Love To Hear From You.</h1>
     <div className='contactPage'>
     <label>Name</label>
      <input className='nameBox' type="text" name="from_name" />
